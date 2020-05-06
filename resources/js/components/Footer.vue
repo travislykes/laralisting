@@ -8,13 +8,13 @@
               <div class="footer-widget">
                 <div class="footer-logo-block">
                   <a>
-                    <img src="{{ asset('images/logo.png')}}" alt="img" class="img-responsive">
+                    <img v-bind:src="'images/logo.png'" alt="img" class="img-responsive">
                   </a>
                 </div>
                 <p class="address">
-                  <i class="fa fa-map-marker" aria-hidden="true" /> Suite # 25/B, Green Street California, CA78542
+                  <i class="fa fa-map-marker" aria-hidden="true" /> Fabrikzeile # 26/2, <br>Saalepark Hof Bavaria, 95028
                 </p>
-                <p><i class="fa fa-phone" aria-hidden="true" /> +1-0000-000-000</p>
+                <p><i class="fa fa-phone" aria-hidden="true" /> +49-0000-000-000</p>
                 <p><i class="fa fa-envelope-o" aria-hidden="true" /> info@example.com</p>
                 <div class="footer-social-block">
                   <span>Follow us:</span>
@@ -119,7 +119,7 @@
                 <article class="latest-post">
                   <div class="post-thumb">
                     <a href="javascript:void(0)">
-                      <img src="{{asset('images/post/7.jpg')}}" alt="img" class="img-responsive">
+                      <img v-bind:src="'images/post/7.jpg'" alt="img" class="img-responsive">
                     </a>
                   </div>
                   <div class="post-wrapper">
@@ -141,7 +141,7 @@
                 <article class="latest-post">
                   <div class="post-thumb">
                     <a href="javascript:void(0)">
-                      <img src="{{ asset('images/post/7.jpg')}}" alt="img" class="img-responsive">
+                      <img v-bind:src="'images/post/7.jpg'" alt="img" class="img-responsive">
                     </a>
                   </div>
                   <div class="post-wrapper">
@@ -189,7 +189,7 @@
             </div>
             <div class="col-md-6 pull-md-6">
               <p class="copyright-text">
-                Copyright 2018, <a>ListingGEO</a>. All Rights Reserved.
+                Copyright 2020. <a>ListingGEO</a>. All Rights Reserved.
               </p>
             </div>
           </div>
@@ -198,3 +198,9 @@
     </footer>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'TheFooter'
+}
+</script>

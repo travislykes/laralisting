@@ -5,19 +5,20 @@
     <div class="container mt-4">
       <child />
     </div>
-    <footer />
+    <theFooter>
+    </theFooter>
   </div>
 </template>
 
 <script>
 import Navbar from '~/components/Navbar'
-import Footer from '~/components/Footer'
+import theFooter from '~/components/Footer'
 export default {
   name: 'MainLayout',
 
   components: {
     Navbar,
-      Footer
+      theFooter
   }
 }
 </script>

@@ -12,9 +12,11 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars navbar-toggle-btn" aria-hidden="true"></i>
       </button>
-      <a class="navbar-brand" href="home-one.html">
-        <img src="images/logo.png" alt="img" class="img-responsive">
+      <router-link :to="{ name: user ? 'home' : 'welcome' }" class="navbar-brand">
+      <a class="navbar-brand">
+        <img v-bind:src="'images/logo.png'" alt="img" class="img-responsive">
       </a>
+      </router-link>
       <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
         <ul class="navbar-nav">
           <li class="nav-item dropdown">

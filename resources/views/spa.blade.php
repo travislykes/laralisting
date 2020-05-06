@@ -14,7 +14,7 @@ $config = [
 
   <title>{{ config('app.name') }}</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type='text/css'>
-
+  <link rel="stylesheet" href="{{ mix('dist/css/app.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{ asset('assets/css/themify-icons.css')}}">
   <link rel="stylesheet" href="{{ asset('assets/css/simple-line-icons.css')}}">
@@ -28,7 +28,7 @@ $config = [
   <link rel="stylesheet" href="{{ asset('css/style.css')}}">
 
   <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
-  <link rel="stylesheet" href="{{ mix('dist/css/app.css') }}">
+
 </head>
 <body>
   <div id="app"></div>
