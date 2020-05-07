@@ -37,6 +37,7 @@
 import Form from 'vform'
 
 export default {
+  layout: 'admin',
   scrollToTop: false,
 
   metaInfo () {

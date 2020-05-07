@@ -38,6 +38,7 @@ import Form from 'vform'
 import { mapGetters } from 'vuex'
 
 export default {
+  layout: 'admin',
   scrollToTop: false,
 
   metaInfo () {
