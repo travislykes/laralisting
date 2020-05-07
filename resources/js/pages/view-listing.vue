@@ -1,10 +1,16 @@
 <template>
-    $END$
+<div>
+<list></list>
+</div>
 </template>
 
 <script>
+  import list from '~/components/SingleListing'
   export default {
-    name: 'view-listing'
+    layout: 'basic',
+    components: {
+      list
+    }
   }
 </script>
 
