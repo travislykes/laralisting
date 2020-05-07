@@ -2,6 +2,8 @@
   <div>
   <explore></explore>
     <categorybox></categorybox>
+    <cities></cities>
+    <popular-listings></popular-listings>
   </div>
 </template>
 
@@ -9,12 +11,16 @@
 import { mapGetters } from 'vuex'
 import explore from '~/components/Explore'
 import categorybox from '~/components/Categorybox'
+import popularListings from '~/components/PopularListings'
+import cities from '~/components/Cities'
 export default {
   layout: 'basic',
 
     components: {
       explore,
-        categorybox
+      categorybox,
+      popularListings,
+      cities
     },
   metaInfo () {
     return { title: this.$t('home') }

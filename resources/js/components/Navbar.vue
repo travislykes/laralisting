@@ -1,12 +1,11 @@
 <template>
   <div class="main-nav-section">
     <div class="user-panel">
-      <a href="login.html" class="user-login-btn border-btn">
-        <i class="fa fa-user-o" aria-hidden="true"></i> Log in
-      </a>
-      <a href="add-listing.html" class="user-addlisting-btn">
-        <i class="fa fa-plus" aria-hidden="true"></i> Add Listing
-      </a>
+      <router-link :to="{ name: 'login' }" class="user-login-btn border-btn" active-class="active">
+        <a>
+          <i class="fa fa-user-o" aria-hidden="true"></i> Log in
+        </a>
+      </router-link>
     </div>
     <nav class="navbar navbar-toggleable-md fixed-top">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,13 +24,12 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
               <li><a class="dropdown-item" href="listing-map-left.html">Map Left</a></li>
-              <li><a class="dropdown-item" href="listing-map-right.html">Map Right</a></li>
-              <li><a class="dropdown-item" href="listing-map-full.html">Map Fullwidth</a></li>
-              <li><a class="dropdown-item" href="single-listing.html">Listing Details</a></li>
-              <li><a class="dropdown-item" href="add-listing.html">Add Listing</a></li>
-              <li><a class="dropdown-item" href="favorite-listing.html">Favorite Listings</a></li>
-              <li><a class="dropdown-item" href="single.html">Single</a></li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-plus" aria-hidden="true"></i> Add Listing
+            </a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="home-one.html" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -39,13 +37,6 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
               <li><a class="dropdown-item" href="home-one.html">Home One</a></li>
-              <li><a class="dropdown-item" href="home-two.html">Home Two</a></li>
-              <li><a class="dropdown-item" href="about.html">About Us</a></li>
-              <li><a class="dropdown-item" href="working-process.html">How It Works</a></li>
-              <li><a class="dropdown-item" href="packages.html">Listing Package</a></li>
-              <li><a class="dropdown-item" href="gallery.html">Photo Gallery</a></li>
-              <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
-              <li><a class="dropdown-item" href="404.html">404</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -53,7 +44,39 @@
               Dashboard
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
-              <li><a class="dropdown-item">Dashboard</a></li>
+              <!-- Authenticated -->
+              <li v-if="user" class="nav-item dropdown">
+                <a class="dropdown-item"
+                   href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img :src="user.photo_url" class="rounded-circle profile-photo mr-1">
+                  {{ user.name }}
+                </a>
+                <div class="dropdown-menu">
+                  <router-link :to="{ name: 'settings.profile' }" class="dropdown-item">
+                    <fa icon="cog" fixed-width />
+                    {{ $t('settings') }}
+                  </router-link>
+
+                  <div class="dropdown-divider" />
+                  <a href="#" class="dropdown-item" @click.prevent="logout">
+                    <fa icon="sign-out-alt" fixed-width />
+                    {{ $t('logout') }}
+                  </a>
+                </div>
+              </li>
+              <!-- Guest -->
+              <template v-else>
+                <li class="nav-item dropdown-item">
+                  <router-link :to="{ name: 'login' }" class="nav-link" active-class="active">
+                    {{ $t('login') }}
+                  </router-link>
+                </li>
+                <li class="nav-item dropdown-item">
+                  <router-link :to="{ name: 'register' }" class="nav-link" active-class="active">
+                    {{ $t('register') }}
+                  </router-link>
+                </li>
+              </template>
             </ul>
           </li>
         </ul>
@@ -97,4 +120,5 @@ export default {
   height: 2rem;
   margin: -.375rem 0;
 }
+
 </style>
