@@ -6,6 +6,7 @@
           <i class="fa fa-user-o" aria-hidden="true"></i> Log in
         </a>
       </router-link>
+
     </div>
     <nav class="navbar navbar-toggleable-md fixed-top">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,30 +19,29 @@
       </router-link>
       <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
         <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="listing-map-left.html" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Explore
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
-              <li><a class="dropdown-item" href="listing-map-left.html">Map Left</a></li>
-            </ul>
-          </li>
+          <router-link :to="{ name: 'welcome' }">
+            <li class="nav-item ">
+              <a class="nav-link" id="navbarDropdownMenuLink14" aria-expanded="false">
+                Home
+              </a>
+            </li>
+          </router-link>
+          <router-link :to="{ name: 'listings' }">
+            <li class="nav-item ">
+              <a class="nav-link" id="navbarDropdownMenuLink1" aria-expanded="false">
+                Explore
+              </a>
+            </li>
+          </router-link>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fa fa-plus" aria-hidden="true"></i> Add Listing
             </a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="home-one.html" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Pages
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-              <li><a class="dropdown-item" href="home-one.html">Home One</a></li>
-            </ul>
-          </li>
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dashboard
+              My Account
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
               <!-- Authenticated -->
@@ -53,13 +53,11 @@
                 </a>
                 <div class="dropdown-menu">
                   <router-link :to="{ name: 'settings.profile' }" class="dropdown-item">
-                    <fa icon="cog" fixed-width />
                     {{ $t('settings') }}
                   </router-link>
 
                   <div class="dropdown-divider" />
                   <a href="#" class="dropdown-item" @click.prevent="logout">
-                    <fa icon="sign-out-alt" fixed-width />
                     {{ $t('logout') }}
                   </a>
                 </div>

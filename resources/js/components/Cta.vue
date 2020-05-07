@@ -8,12 +8,16 @@
         There are many consumers & business owners find this directory is helpful.
       </p>
       <div class="btn-group">
-        <a href="add-listing.html" class="icon-btn adining-listing-btn">
+        <router-link :to="{ name: 'add.listing' }">
+        <a href="#" class="icon-btn adining-listing-btn">
           <i class="fa fa-plus" aria-hidden="true"></i> Add Listing
         </a>
-        <a href="single-listing.html" class="icon-btn explore-listing-btn">
-          <i class="fa fa-search" aria-hidden="true"></i> Explore Listing
+        </router-link>
+        <router-link :to="{ name: 'listings' }">
+        <a href="#" class="icon-btn explore-listing-btn">
+          <i class="fa fa-search" aria-hidden="true"></i> Explore Listings
         </a>
+        </router-link>
       </div>
     </div>
   </div>
