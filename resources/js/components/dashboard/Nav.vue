@@ -1,9 +1,11 @@
 <template>
   <div class="main-nav-section">
     <div class="user-panel">
+      <router-link :to="{ name: 'add.listing' }">
       <a href="#" class="user-login-btn border-btn">
         <i class="fa fa-plus" aria-hidden="true"></i> Add Listing
       </a>
+      </router-link>
 <!--      <a href="#" class="user-addlisting-btn">-->
 <!--        <i class="fa fa-plus" aria-hidden="true"></i> Add Listing-->
 <!--      </a>-->
@@ -56,8 +58,13 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
   export default {
-    name: 'Nav'
+    name: 'Nav',
+
+    computed: mapGetters({
+      user: 'auth/user'
+    }),
   }
 </script>
 

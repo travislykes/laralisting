@@ -6,7 +6,7 @@
       </p>
     </div>
     <!-- add-listing-tost-block -->
-    <form id="add_listing_form" class="form-common add-listing-form" action="#" novalidate="novalidate">
+    <form id="add_listing_form" class="form-common add-listing-form" @submit.prevent="addList" @keydown="form.onKeydown($event)" novalidate="novalidate" enctype="multipart/form-data">
       <div class="listing-block businessinfo-listing">
         <h4>Business Information</h4>
         <div class="row">
@@ -492,8 +492,29 @@
 </template>
 
 <script>
+  import Form from 'vform'
   export default {
-    name: 'AddListing'
+    name: 'AddListing',
+    metaInfo () {
+      return { title: this.$t('Add Listing') }
+    },
+
+    data: () => ({
+      form: new Form({
+        email: '',
+        password: ''
+      })
+    }),
+
+    methods: {
+      async addList () {
+        const { data } = await this.form.post('/api/password/email')
+
+        this.status = data.status
+
+        this.form.reset()
+      }
+    }
   }
 </script>
 

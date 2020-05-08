@@ -39,25 +39,29 @@
           </div>
           <div class="menu-content" data-content>
             <div class="nav-item">
-              <a href="dashboard-all-listing.html">
+              <a href="#">
                 <span class="menu-icon-wrap bullet"></span>
                 <span class="menu-title">All listings</span>
               </a>
             </div>
+            <router-link :to="{ name: 'add.listing' }">
             <div class="nav-item">
-              <a href="dashboard-new-listing.html">
+              <a href="#">
                 <span class="menu-icon-wrap bullet"></span>
                 <span class="menu-title">Add new listings</span>
               </a>
             </div>
+            </router-link>
+            <router-link :to="{ name: 'settings.profile' }">
             <div class="nav-item">
-              <a href="dashboard-active-listing.html">
+              <a href="#">
                 <span class="menu-icon-wrap bullet"></span>
-                <span class="menu-title">Active Listings</span>
+                <span class="menu-title">Settings</span>
               </a>
             </div>
+            </router-link>
             <div class="nav-item">
-              <a href="dashboard-expired-listing.html">
+              <a href="#">
                 <span class="menu-icon-wrap bullet"></span>
                 <span class="menu-title">Expired Listings</span>
               </a>

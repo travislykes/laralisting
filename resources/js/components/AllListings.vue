@@ -166,7 +166,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="serach-result-section-title">
-                <h4>5 Results For <strong>“Restaurant”</strong></h4>
+                <h4>All Listings <strong>(20)</strong></h4>
               </div>
             </div>
             <div class="col-md-6">

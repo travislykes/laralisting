@@ -50,6 +50,7 @@
 import Form from 'vform'
 
 export default {
+  layout: 'basic',
   middleware: 'guest',
 
   metaInfo () {
