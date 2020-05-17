@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="add-listing-tost-block">
       <p>
-        <strong>Existing User? Please </strong><a href="login.html">Sign in.</a> <strong>New here? </strong>Please <strong>continue</strong> and enter your <strong>Name</strong> & <strong>Email</strong> Address along with listing information at the bottom.
+        <strong>Add New Listing </strong>
       </p>
     </div>
     <!-- add-listing-tost-block -->
@@ -14,8 +14,8 @@
             <div class="businessinfo-left-block">
               <div class="form-group">
                 <label for="listing_name">Listing Name</label>
-                <input id="listing_name" type="text" class="form-control form-single-element" placeholder="Ex: Anderson Hotel" aria-required="true">
-                <input id="listing_tagline" type="text" class="form-control" placeholder="Business Tagline goes here" aria-required="true">
+                <input id="listing_name" type="text" v-model="form.listingname" class="form-control form-single-element" placeholder="Ex: Anderson Hotel" aria-required="true">
+                <input id="listing_tagline" type="text" v-model="form.category" class="form-control" placeholder="Business Tagline goes here" aria-required="true">
               </div>
               <div class="form-group">
                 <label for="listing_email">Contact Email</label>
@@ -496,13 +496,13 @@
   export default {
     name: 'AddListing',
     metaInfo () {
-      return { title: this.$t('Add Listing') }
+      return { title: this.$t('Thisss Listing') }
     },
 
     data: () => ({
       form: new Form({
-        email: '',
-        password: ''
+        listingname: '',
+        category: ''
       })
     }),
 
