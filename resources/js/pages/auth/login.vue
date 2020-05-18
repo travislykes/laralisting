@@ -70,7 +70,7 @@
                   </div>
                 </form>
                 <div class="signin-others-option-block">
-                  <h5>Not a Member? <a href="javascript:void(0)">Sign up</a></h5>
+                  <h5>Not a Member? <router-link :to="{ name: 'register' }">Sign up</router-link></h5>
                   <p>Connect with your social media network</p>
                   <div class="social-icon-btn-group-detail">
                     <a href="javascript:void(0)" class="icon-btn-fb">

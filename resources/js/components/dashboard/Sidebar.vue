@@ -16,7 +16,7 @@
             <h5>
               {{ user.name }}
             </h5>
-            <span>{{ user.role ? 'Admin' :'User'}}</span>
+            <span>{{ user.role ? 'user' :'admin'}}</span>
           </div>
         </div>
         <a href="#" class="listing-btn-cmn">Update Profile</a>
@@ -27,6 +27,14 @@
             <a href="#">
               <span class="menu-icon-wrap icon ti-layers-alt"></span>
               <span class="menu-title">Dashboard</span>
+            </a>
+          </div>
+        </div>
+        <div v-if="user.role === 'admin'" class="slide-navigation-wrap">
+          <div class="nav-item">
+            <a href="#">
+              <span class="menu-icon-wrap icon ti-game"></span>
+              <span class="menu-title">Listing Config</span>
             </a>
           </div>
         </div>
@@ -56,7 +64,7 @@
             <div class="nav-item">
               <a href="#">
                 <span class="menu-icon-wrap bullet"></span>
-                <span class="menu-title">Settings</span>
+                <span class="menu-title">Account Settings</span>
               </a>
             </div>
             </router-link>

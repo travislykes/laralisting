@@ -20,6 +20,11 @@ Route::group(['middleware' => 'auth:api'], function () {
 
     Route::patch('settings/profile', 'Settings\ProfileController@update');
     Route::patch('settings/password', 'Settings\PasswordController@update');
+
+    //Category Routes
+    Route::apiResource('admin/categories', 'CategoryController');
+    Route::apiResource('admin/location','LocationController');
+    Route::apiResource('my-listings', 'ListingController');
 });
 
 Route::group(['middleware' => 'guest:api'], function () {
