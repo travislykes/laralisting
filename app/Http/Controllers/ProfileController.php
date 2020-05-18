@@ -2,11 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\ListingResource;
+use App\Listing;
 use App\Profile;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
+
+    /**
+     * Display all my listings.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function myListings()
+    {
+        $myListings = Listing::where('user_id', auth()->user()->id)->get();
+
+        return  ListingResource::collection($myListings);
+    }
     /**
      * Display a listing of the resource.
      *

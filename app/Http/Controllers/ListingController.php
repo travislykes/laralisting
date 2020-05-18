@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\ListingResource;
 use App\Listing;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,9 @@ class ListingController extends Controller
      */
     public function index()
     {
-        //
+        $listings = Listing::all();
+
+        return  ListingResource::collection($listings);
     }
 
     /**
