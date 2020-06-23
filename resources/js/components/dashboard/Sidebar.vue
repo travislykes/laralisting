@@ -10,7 +10,6 @@
         <div>
           <div class="user-thumb">
             <img :src="user.photo_url" class="rounded-circle profile-photo mr-1">
-<!--            <img :src="'images/misc/9.jpg'" alt="img" class="img-responsive">-->
           </div>
           <div class="user-info">
             <h5>
@@ -19,32 +18,47 @@
             <span>{{ user.role ? 'user' :'admin'}}</span>
           </div>
         </div>
-        <a href="#" class="listing-btn-cmn">Update Profile</a>
+        <router-link :to="{ name: 'settings.profile' }">
+        <a href="#" class="listing-btn-cmn">My Profile</a>
+        </router-link>
       </div>
       <div class="accordion-menu responsive-menu" data-accordion-group>
         <div class="slide-navigation-wrap">
+          <router-link :to="{ name: 'home' }">
           <div class="nav-item">
             <a href="#">
               <span class="menu-icon-wrap icon ti-layers-alt"></span>
-              <span class="menu-title">Dashboard</span>
+              <span class="menu-title">My Listings</span>
             </a>
           </div>
+          </router-link>
         </div>
         <div v-if="user.role === 'admin'" class="slide-navigation-wrap">
+          <router-link :to="{ name: 'config.categories' }">
           <div class="nav-item">
             <a href="#">
               <span class="menu-icon-wrap icon ti-game"></span>
               <span class="menu-title">Listing Config</span>
             </a>
           </div>
+          </router-link>
+
+          <router-link :to="{ name: 'config.location' }">
+            <div class="nav-item">
+              <a href="#">
+                <span class="menu-icon-wrap bullet"></span>
+                <span class="menu-title">Locations</span>
+              </a>
+            </div>
+          </router-link>
         </div>
         <div class="slide-navigation-wrap" data-accordion>
-          <div class="nav-item has-sub" data-control>
-            <a href="javascript:void(0)">
-              <span class="menu-icon-wrap icon ti-location-pin"></span>
-              <span class="menu-title">My Listing</span>
-            </a>
-          </div>
+<!--          <div class="nav-item has-sub" data-control>-->
+<!--            <a href="javascript:void(0)">-->
+<!--              <span class="menu-icon-wrap icon ti-location-pin"></span>-->
+<!--              <span class="menu-title">My Listing</span>-->
+<!--            </a>-->
+<!--          </div>-->
           <div class="menu-content" data-content>
             <div class="nav-item">
               <a href="#">
@@ -60,20 +74,14 @@
               </a>
             </div>
             </router-link>
-            <router-link :to="{ name: 'settings.profile' }">
-            <div class="nav-item">
-              <a href="#">
-                <span class="menu-icon-wrap bullet"></span>
-                <span class="menu-title">Account Settings</span>
-              </a>
-            </div>
-            </router-link>
+
             <div class="nav-item">
               <a href="#">
                 <span class="menu-icon-wrap bullet"></span>
                 <span class="menu-title">Expired Listings</span>
               </a>
             </div>
+
           </div>
         </div>
         <div class="slide-navigation-wrap">

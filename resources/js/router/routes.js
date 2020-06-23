@@ -5,7 +5,7 @@ function page (path) {
 export default [
   { path: '/', name: 'welcome', component: page('welcome.vue') },
   { path: '/listings', name: 'listings', component: page('listings.vue') },
-  { path: '/view-listing', name: 'view.listing', component: page('view-listing.vue') },
+  { path: '/view-listing/:id', name: 'view.listing', component: page('view-listing.vue') },
 
   { path: '/login', name: 'login', component: page('auth/login.vue') },
   { path: '/register', name: 'register', component: page('auth/register.vue') },
@@ -16,6 +16,8 @@ export default [
 
   { path: '/home', name: 'home', component: page('home.vue') },
   { path: '/add-listing', name: 'add.listing', component: page('add-listing.vue') },
+  { path: '/categories', name: 'config.categories', component: page('config/categories.vue') },
+  { path: '/location', name: 'config.location', component: page('config/location.vue') },
   { path: '/settings',
     component: page('settings/index.vue'),
     children: [
@@ -23,6 +25,14 @@ export default [
       { path: 'profile', name: 'settings.profile', component: page('settings/profile.vue') },
       { path: 'password', name: 'settings.password', component: page('settings/password.vue') }
     ] },
+
+  // { path: '/config',
+  //   component: page('config/index.vue'),
+  //   children: [
+  //     { path: '', redirect: { name: 'config.location' } },
+  //     // { path: 'categories', name: 'config.categories', component: page('config/categories.vue') },
+  //     { path: 'location', name: 'config.location', component: page('config/location.vue') }
+  //   ] },
 
   { path: '*', component: page('errors/404.vue') }
 ]

@@ -31,56 +31,56 @@
           </div>
           <!-- header-content-block -->
         </div>
-        <div class="col-lg-5 offset-lg-1">
-          <div class="listing-catagory-block">
-            <div class="catagory-image">
-              <img v-bind:src="'../images/category/1.jpg'" alt="img" class="img-responsive">
-              <div class="catagory-text">
-                <h4>
-                  <a href="javascript:void(0)">Restaurant</a>
-                </h4>
-                <p class="hide-text">125 Listings</p>
-              </div>
-              <div class="overlay"></div>
-            </div>
-          </div>
-          <div class="listing-catagory-block">
-            <div class="catagory-image">
-              <img v-bind:src="'../images/category/2.jpg'"  alt="img" class="img-responsive">
-              <div class="catagory-text">
-                <h4>
-                  <a href="javascript:void(0)">Health & Medical</a>
-                </h4>
-                <p class="hide-text">125 Listings</p>
-              </div>
-              <div class="overlay"></div>
-            </div>
-          </div>
-          <div class="listing-catagory-block">
-            <div class="catagory-image">
-              <img v-bind:src="'../images/category/3.jpg'" alt="img" class="img-responsive">
-              <div class="catagory-text">
-                <h4>
-                  <a href="javascript:void(0)">Hotel</a>
-                </h4>
-                <p class="hide-text">125 Listings</p>
-              </div>
-              <div class="overlay"></div>
-            </div>
-          </div>
-          <div class="listing-catagory-block">
-            <div class="catagory-image">
-              <img v-bind:src="'../images/category/4.jpg'" alt="img" class="img-responsive">
-              <div class="catagory-text">
-                <h4>
-                  <a href="javascript:void(0)">Real Estate</a>
-                </h4>
-                <p class="hide-text">125 Listings</p>
-              </div>
-              <div class="overlay"></div>
-            </div>
-          </div>
-        </div>
+<!--        <div class="col-lg-5 offset-lg-1">-->
+<!--          <div class="listing-catagory-block">-->
+<!--            <div class="catagory-image">-->
+<!--              <img v-bind:src="'../images/category/1.jpg'" alt="img" class="img-responsive">-->
+<!--              <div class="catagory-text">-->
+<!--                <h4>-->
+<!--                  <a href="javascript:void(0)">Restaurant</a>-->
+<!--                </h4>-->
+<!--                <p class="hide-text">125 Listings</p>-->
+<!--              </div>-->
+<!--              <div class="overlay"></div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="listing-catagory-block">-->
+<!--            <div class="catagory-image">-->
+<!--              <img v-bind:src="'../images/category/2.jpg'"  alt="img" class="img-responsive">-->
+<!--              <div class="catagory-text">-->
+<!--                <h4>-->
+<!--                  <a href="javascript:void(0)">Health & Medical</a>-->
+<!--                </h4>-->
+<!--                <p class="hide-text">125 Listings</p>-->
+<!--              </div>-->
+<!--              <div class="overlay"></div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="listing-catagory-block">-->
+<!--            <div class="catagory-image">-->
+<!--              <img v-bind:src="'../images/category/3.jpg'" alt="img" class="img-responsive">-->
+<!--              <div class="catagory-text">-->
+<!--                <h4>-->
+<!--                  <a href="javascript:void(0)">Hotel</a>-->
+<!--                </h4>-->
+<!--                <p class="hide-text">125 Listings</p>-->
+<!--              </div>-->
+<!--              <div class="overlay"></div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="listing-catagory-block">-->
+<!--            <div class="catagory-image">-->
+<!--              <img v-bind:src="'../images/category/4.jpg'" alt="img" class="img-responsive">-->
+<!--              <div class="catagory-text">-->
+<!--                <h4>-->
+<!--                  <a href="javascript:void(0)">Real Estate</a>-->
+<!--                </h4>-->
+<!--                <p class="hide-text">125 Listings</p>-->
+<!--              </div>-->
+<!--              <div class="overlay"></div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
     </div>
     <div class="overlay"></div>

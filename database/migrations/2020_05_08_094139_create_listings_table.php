@@ -24,7 +24,7 @@ class CreateListingsTable extends Migration
             $table->integer('user_id');
             $table->integer('category_id');
             $table->integer('location_id');
-            $table->enum('status', ['published', 'unpublished'])->default('unpublished');
+            $table->enum('status', ['published', 'unpublished'])->default('published');
             $table->enum('condition', ['new', 'used','slightly_used'])->default('new');
             $table->text('features')->nullable();
             $table->text('video_url')->nullable();

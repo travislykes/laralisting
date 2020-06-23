@@ -795,7 +795,47 @@
 
 <script>
   export default {
-    name: 'SingleListing'
+    name: 'SingleListing',
+
+    data: () => ({
+      listingDetails: [],
+
+    }),
+
+    // created() {
+    //   this.fetchListing();
+    // },
+
+    methods: {
+
+      // fetchListing(id) {
+      //   // this.id = listingDetails.id,
+      //     fetch(`/api/listing/${id}`, {
+      //     })
+      //       .then(res => res.json())
+      //       .then(res => {
+      //         this.listingDetails = res.data;
+      //
+      //       })
+      //       .catch(err => console.log(err));
+      //
+      // },
+      fetchListing(page_url) {
+        let vm = this;
+        let url = window.location.href
+         // id = /[^/]*$/.exec(url)[0];
+        console.log($this.$router.params.id)
+        page_url = page_url || `/api/listing/${this.$router.params.id}`;
+        // console.log(page_url)
+        fetch(page_url)
+          .then(res => res.json())
+          .then(res => {
+            this.listingDetails = res.data;
+
+          })
+          .catch(err => console.log(err));
+      },
+    }
   }
 </script>
 

@@ -1,11 +1,8 @@
 <template>
   <div>
-<!--    <card :title="$t('home')">-->
-<!--      {{ $t('you_are_logged_in') }} {{ user.name}}-->
-<!--    </card>-->
     <div class="add-listing-tost-block">
       <p>
-        <strong>{{ $t('you_are_logged_in') }} </strong><a href="#">{{ user.name }}</a> 
+        <strong>{{ $t('you_are_logged_in') }} </strong><a href="#">{{ user.name }}</a>
       </p>
     </div>
     <my-listings></my-listings>

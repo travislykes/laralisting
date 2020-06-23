@@ -9,6 +9,7 @@ class Listing extends Model
 {
     use SoftDeletes;
 
+    protected $fillable = ['name', 'description','price', 'featuredImage', 'condition', 'gallery','user_id','category_id','location_id','status','condition','features','video_url'];
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -21,6 +22,6 @@ class Listing extends Model
 
     public function location()
     {
-        return $this->hasMany(Location::class);
+        return $this->belongsTo(Location::class);
     }
 }

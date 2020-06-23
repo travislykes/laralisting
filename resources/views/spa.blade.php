@@ -28,7 +28,16 @@ $config = [
   <link rel="stylesheet" href="{{ asset('css/style.css')}}">
 
   <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
-
+  <style>
+    .overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(17, 17, 17, 0.29);
+    }
+  </style>
 </head>
 <body>
   <div id="app"></div>

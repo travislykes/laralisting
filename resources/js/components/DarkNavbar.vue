@@ -1,12 +1,11 @@
 <template>
   <div class="main-nav-section main-nav-two-section">
     <div class="user-panel">
+      <router-link :to="{ name: 'login' }">
       <a href="#" class="user-login-btn border-btn">
         <i class="fa fa-user-o" aria-hidden="true"></i> Log in
       </a>
-      <a href="#" class="user-addlisting-btn">
-        <i class="fa fa-plus" aria-hidden="true"></i> Sign Up
-      </a>
+      </router-link>
     </div>
     <nav class="navbar navbar-toggleable-md fixed-top">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,11 +31,15 @@
             </li>
           </router-link>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="dshboard.html" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dashboard
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              My Account
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
-              <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                <router-link :to="{ name: 'home' }">
+                  <li>
+                <a class="dropdown-item" href="#">Dashboard</a>
+                  </li>
+                </router-link>
             </ul>
           </li>
         </ul>
