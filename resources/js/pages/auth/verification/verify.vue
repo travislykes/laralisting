@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div class="row">
     <div class="col-lg-8 m-auto">
       <card :title="$t('verify_email')">
